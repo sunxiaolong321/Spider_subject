@@ -3,8 +3,7 @@ import scrapy
 from urllib.parse import urlencode
 from scrapy import Request
 import json
-from so_image.items import ImageItem
-
+from ..items import ImageItem
 
 class ImagesSpider(scrapy.Spider):
     name = 'images'

@@ -1,7 +1,7 @@
 # 导入数据到mysql
 def to_mysql(data):
     import pymysql
-    from settings import mysql_config
+    from ..settings import mysql_config
     # 建立mysql连接
     connection = pymysql.connect(host=mysql_config["host"], port=mysql_config["port"],
                                  user=mysql_config["user"], password=mysql_config["password"],
@@ -77,7 +77,7 @@ def to_mysql(data):
 class to_mongo():
 
     def __init__(self):
-        from settings import db_config
+        from ..settings import db_config
         self.host = db_config["host"]
         self.port = db_config["port"]
         self.db = db_config["db"]
